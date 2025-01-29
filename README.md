@@ -41,4 +41,8 @@ Next, I set up Wazuh using Digital Ocean as the cloud provider. The screenshots 
 
 <img width="2560" alt="2 4" src="https://github.com/user-attachments/assets/33108190-8536-4c59-b156-188049d56807" />
 
-Next, I create a firewall to keep external scanners out from the environment. 
+Next, I create a firewall to keep external scanners out from the environment. For the inbound rules type, I select All TCP and set the source to my IP address. I apply the same to the outbound rules for UDP. Afterwards, the VM is ready to be added to the firewall. This is critical because SSH is open to the public. 
+
+<img width="2560" alt="2 5" src="https://github.com/user-attachments/assets/82897600-804b-4d76-9ac9-827db27088d0" />
+
+The Windows VM is configured with the firewall.
