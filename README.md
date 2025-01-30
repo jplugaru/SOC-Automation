@@ -46,3 +46,25 @@ Next, I create a firewall to keep external scanners out from the environment. Fo
 <img width="2560" alt="2 5" src="https://github.com/user-attachments/assets/82897600-804b-4d76-9ac9-827db27088d0" />
 
 The Windows VM is configured with the firewall.
+
+<img width="2560" alt="2 6" src="https://github.com/user-attachments/assets/e24465f7-246d-41d7-9286-e699277e5c1e" />
+
+Next, I perform some updates by typing apt-get update && apt-get upgrade.
+
+<img width="2560" alt="2 7" src="https://github.com/user-attachments/assets/1ed3722f-6960-4f32-a9f5-03963a238b2a" />
+
+Afterwards, I install Wazuh by running the command sudo -i curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
+
+<img width="2560" alt="2 8" src="https://github.com/user-attachments/assets/ca5e4cb5-a2af-4908-8869-81a72fb54095" />
+
+Next, I take note of the public IP address of Wazuh in Digital Ocean
+
+<img width="2560" alt="2 9" src="https://github.com/user-attachments/assets/239b3cf8-7c3c-4d5d-8d51-4f943fea0ec9" />
+
+I take the IP address that was copied from Digital Ocean and open a new browser tab. I type https://<IP address> and then go to the site. I enter the login credentials from the Wazuh setup a few steps above.
+
+<img width="2560" alt="2 10" src="https://github.com/user-attachments/assets/04cb0c61-333a-48e7-a9a0-e2f8def1cab3" />
+<img width="2560" alt="2 11" src="https://github.com/user-attachments/assets/5991da9c-27be-48fc-ab8e-b47352280bd2" />
+<img width="2560" alt="2 12" src="https://github.com/user-attachments/assets/959c3798-65e7-4806-8b09-3d26d5d04c3b" />
+
+The next step is to install The Hive. This is a similar setup as done for Wazuh. I go back to Digital Ocean and create a new Droplet. I select the region closest to me, a Linux Ubuntu 22.04 x64 server with 8GB RAM, 2 CPUs, and 160GB SSD storage space.
