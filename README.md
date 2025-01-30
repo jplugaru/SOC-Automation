@@ -68,3 +68,7 @@ I take the IP address that was copied from Digital Ocean and open a new browser 
 <img width="2560" alt="2 12" src="https://github.com/user-attachments/assets/959c3798-65e7-4806-8b09-3d26d5d04c3b" />
 
 The next step is to install The Hive. This is a similar setup as done for Wazuh. I go back to Digital Ocean and create a new Droplet. I select the region closest to me, a Linux Ubuntu 22.04 x64 server with 8GB RAM, 2 CPUs, and 160GB SSD storage space.
+
+<img width="2560" alt="2 13" src="https://github.com/user-attachments/assets/8141e5f0-7794-432a-874c-6fa1328960dc" />
+
+After The Hive is created, I add it to the firewall that was created earlier.
