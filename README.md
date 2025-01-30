@@ -72,3 +72,7 @@ The next step is to install The Hive. This is a similar setup as done for Wazuh.
 <img width="2560" alt="2 13" src="https://github.com/user-attachments/assets/8141e5f0-7794-432a-874c-6fa1328960dc" />
 
 After The Hive is created, I add it to the firewall that was created earlier.
+
+<img width="1473" alt="2 14" src="https://github.com/user-attachments/assets/a2096cdb-e202-4c58-bca0-2913f40a422e" />
+
+The next step is to install Java, Cassandra, ElasticSearch, and TheHive. All of these programs are installed via Terminal on my local machine by connecting to the Linux Ubuntu server via SSH.
