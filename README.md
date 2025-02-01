@@ -76,3 +76,16 @@ After The Hive is created, I add it to the firewall that was created earlier.
 <img width="1473" alt="2 14" src="https://github.com/user-attachments/assets/0056f6bf-faa8-4d51-a66e-8d105cbccac6" />
 
 The next step is to install Java, Cassandra, ElasticSearch, and TheHive. All of these programs are installed via Terminal on my local machine by connecting to the Linux Ubuntu server via SSH.
+
+<img width="1018" alt="2 15" src="https://github.com/user-attachments/assets/b2fe6962-3319-4169-a0ce-60b8c5913f28" />
+
+Afterwards, the next step is to configure The Hive. I type nano /etc/cassandra/cassandra.yaml to customoze the cluster name. I changed it to Jonathan Lab
+
+<img width="1018" alt="2 16" src="https://github.com/user-attachments/assets/4960b581-e33a-45d5-be5d-ff4c38d7b6a5" />
+
+Next, I change the IP address of the listen_address to match that of The Hive's address. The same IP address is applied to the rpc_address. Lastly, the seeds IP address is also changed to match The Hive's address.
+
+<img width="1018" alt="2 17" src="https://github.com/user-attachments/assets/7571a457-6358-45b6-be47-ebabe416968c" />
+
+Next, the Cassandra service must be stopped and redundant files are cleaned out using rm -rf /var/lib/cassandra/*.
+
