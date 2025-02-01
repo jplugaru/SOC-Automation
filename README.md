@@ -86,6 +86,17 @@ Afterwards, the next step is to configure The Hive. I type nano /etc/cassandra/c
 Next, I change the IP address of the listen_address to match that of The Hive's address. The same IP address is applied to the rpc_address. Lastly, the seeds IP address is also changed to match The Hive's address.
 
 <img width="1018" alt="2 17" src="https://github.com/user-attachments/assets/7571a457-6358-45b6-be47-ebabe416968c" />
+<img width="1018" alt="2 18" src="https://github.com/user-attachments/assets/1c6b7863-d2ff-4457-8a96-2215d473fa52" />
 
-Next, the Cassandra service must be stopped and redundant files are cleaned out using rm -rf /var/lib/cassandra/*.
+Next, the Cassandra service must be stopped and redundant files are cleaned out using rm -rf /var/lib/cassandra/*. Afterwards, Cassandra is restarted by typing systemctl start cassandra.service.
+
+<img width="1018" alt="2 19" src="https://github.com/user-attachments/assets/f88a9582-1da0-44e6-adfd-2c73e0d05c48" />
+<img width="1018" alt="2 20" src="https://github.com/user-attachments/assets/e85beb3f-64f6-49af-863d-a43e021c2117" />
+
+Next, elastic search needs to be set up which allows us to query data. The cluster.name, node.attr.rack, network.host, and cluster.initial_master_nodes all need to be changed to reflect The Hive.
+
+<img width="1018" alt="2 21" src="https://github.com/user-attachments/assets/ffcb5a10-0532-41e2-a29d-91a046a06bf6" />
+<img width="1018" alt="2 22" src="https://github.com/user-attachments/assets/d828a8bf-c784-495b-99e4-597ec2ad06b4" />
+
+Next, I want to double check to see if The Hive user end group has access to to a specific file path. I type ls -la /opt/thp and have the results shown on the screen which show me that the root account has access to the directory. This will need to be changed. I type chown -R thehive:thehive /opt/thp in order to change the permissions.
 
