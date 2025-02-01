@@ -100,3 +100,12 @@ Next, elastic search needs to be set up which allows us to query data. The clust
 
 Next, I want to double check to see if The Hive user end group has access to to a specific file path. I type ls -la /opt/thp and have the results shown on the screen which show me that the root account has access to the directory. This will need to be changed. I type chown -R thehive:thehive /opt/thp in order to change the permissions.
 
+<img width="1018" alt="2 23" src="https://github.com/user-attachments/assets/bb5dc7dd-b98c-4191-beab-b59f7bf21f77" />
+<img width="1018" alt="2 24" src="https://github.com/user-attachments/assets/53f2fae8-1b5d-47f8-9c13-e76508b3209e" />
+
+Afterwards, I go into the The Hive's configuration file and configure it. I type nano /etc/thehive/application.conf to go into the configuration file. Here, I change the hostname for the database to the IP address for The Hive that I created. The cluster name is also changed to TheHive since that is what was changed for Cassandra. Below that, the host name is changed again to match that of my Hive instance. Further down, the storage path is changed to http://64.225.62.147:9000 which is the public IP of my Hive instance. 
+
+<img width="1018" alt="2 25" src="https://github.com/user-attachments/assets/fde1f808-1e99-40aa-b48f-0d8e3a12b129" />
+
+Afterwards, I save the configuration file and start thehive service, enable thehive service, and then check on its status by typing status thehive. This confirms that all three services (Cassandra, elasticservice, and TheHive) are running otherwise The Hive will not start.
+
