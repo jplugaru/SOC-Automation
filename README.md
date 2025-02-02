@@ -109,3 +109,20 @@ Afterwards, I go into the The Hive's configuration file and configure it. I type
 
 Afterwards, I save the configuration file and start thehive service, enable thehive service, and then check on its status by typing status thehive. This confirms that all three services (Cassandra, elasticservice, and TheHive) are running otherwise The Hive will not start.
 
+<img width="2560" alt="2 26" src="https://github.com/user-attachments/assets/c05ffd2b-c5e3-4700-97e2-0013073f1f81" />
+
+Afterwards, I copy the IP address of The Hive instance and put it in a web browser to verify that it is accessable.
+
+<img width="2560" alt="2 27" src="https://github.com/user-attachments/assets/15ad687f-4b1a-41e8-8f00-0e29a939ce39" />
+<img width="2560" alt="2 28" src="https://github.com/user-attachments/assets/68378901-8ad9-47ba-8de5-f1acb8019ae9" />
+
+The next step is to log into Wazuh and add an agent. I select Windows as the machine, the IP address of my Wazuh instance for the server address, and an agent name of Jonathan.
+
+<img width="1500" alt="2 29" src="https://github.com/user-attachments/assets/83a608c5-05c6-4fcb-bbde-bd8f959da001" />
+
+Afterwards, the command on the Wazuh agent setup page is copied and executed in a Windows PowerShell terminal to install Wazuh. Afterwards, I run the command net start wazuhsvc to start Wazuh.
+
+<img width="2560" alt="2 30" src="https://github.com/user-attachments/assets/f5e9a9cd-2f8a-4642-bc5b-b77c9bace410" />
+<img width="2560" alt="2 31" src="https://github.com/user-attachments/assets/f32df94f-029e-4115-afee-1b7ad1f777da" />
+
+On the Wazuh dashboard page, I see the agent on the screen as active and can click on it to start querying for events. This will allow telemetry to be captured.
