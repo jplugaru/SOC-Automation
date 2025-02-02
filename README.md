@@ -126,3 +126,14 @@ Afterwards, the command on the Wazuh agent setup page is copied and executed in 
 <img width="2560" alt="2 31" src="https://github.com/user-attachments/assets/f32df94f-029e-4115-afee-1b7ad1f777da" />
 
 On the Wazuh dashboard page, I see the agent on the screen as active and can click on it to start querying for events. This will allow telemetry to be captured.
+
+<img width="2560" alt="2 32" src="https://github.com/user-attachments/assets/a91ffde7-4836-4c8c-a215-e82dc6a494fc" />
+<img width="2560" alt="2 33" src="https://github.com/user-attachments/assets/1337c0da-556e-4948-b193-73b3c6f1ef97" />
+<img width="1500" alt="2 34" src="https://github.com/user-attachments/assets/44124f2d-5d96-4654-ae67-922b5d992d55" />
+
+Next, I go into the configuration file for Wazuh which is located at C:\Program Files (x86)\ossec. Afterwards, I need to edit the file so it can ingest Sysmon logs. The Sysmon channel name is obtained by opening Windows Event Viewer and navigating to Applications and Service Logs>Microsoft>Windows>Sysmon>Operational. I right click on the file and selected Properties to copy the name. After that is done, I restart the Wazuh service.
+
+<img width="1500" alt="2 35" src="https://github.com/user-attachments/assets/ea90264e-789b-4872-9035-a82e97591e70" />
+<img width="1500" alt="2 36" src="https://github.com/user-attachments/assets/e53cc893-9737-4439-a535-b853dde780f8" />
+
+Next, Mimikatz is installed onto the Windows machine. Windows Defender will need to be disabled to install the program, which is used by red teamers and attackers to extract credentials from the machine. To install Mimikatz, an exclusion is made in Windows Defender to the Downloads folder so that the Mimikatz installer is not automatically deleted. Once the file is downloaded, I launch a PowerShell terminal and change the directory to navigate to the folder where I downloaded Mimikatz. After that, I run the command to install Mimikatz.
