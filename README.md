@@ -141,4 +141,13 @@ Next, Mimikatz is installed onto the Windows machine. Windows Defender will need
 <img width="2560" alt="2 37" src="https://github.com/user-attachments/assets/f1ad2989-cf3d-4612-9c45-03cf97e27023" />
 <img width="1018" alt="2 38" src="https://github.com/user-attachments/assets/1caa5881-3df9-4817-9bbb-ee8f034fa7bd" />
 
-The next thing I did is go to the Wazuh dashboard to see if any events related to Mimikatz were generated. In this case, nothing was generated and this could be because the Sysmon events did not trigger anything, or rules from Wazuh, since by default Wazuh does not log events from Mimikatz. This could be changed by going into the Wazuh manager and configuring the ossec.conf file so that it can log everything. 
+The next thing I did is go to the Wazuh dashboard to see if any events related to Mimikatz were generated. In this case, nothing was generated and this could be because the Sysmon events did not trigger anything, or rules from Wazuh, since by default Wazuh does not log events from Mimikatz. This could be changed by going into the Wazuh manager and configuring the ossec.conf file so that it can log everything. Before making any changes, I copied the ossec.conf file as a backup in case I need to revert back to it.
+
+<img width="1018" alt="2 39" src="https://github.com/user-attachments/assets/c9eb9201-a12c-477d-8f68-60369c905292" />
+<img width="1018" alt="2 40" src="https://github.com/user-attachments/assets/5f1d4e39-d9d8-46c4-b399-055f612987b4" />
+
+In the configuration, I changed <logall> to yes as well as <logall_json>. Afterwards, I restart the Wazuh manager because I want to force Wazuh to begin archiving all the logs and put them into a file called Archives, located at /var/ossec/logs/archive. 
+
+<img width="1018" alt="2 41" src="https://github.com/user-attachments/assets/c6ed2b63-a148-482d-b1ab-9c131865db26" />
+
+For Wazuh to ingest the logs, I need to change the config and filebeat. This is done by typing nano etc/filebeat/filebeat.yml. In the configuration, I change archives enabled from false to true. Afterwards, I save the config file and restart the filebeat service.
