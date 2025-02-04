@@ -137,3 +137,8 @@ Next, I go into the configuration file for Wazuh which is located at C:\Program 
 <img width="1500" alt="2 36" src="https://github.com/user-attachments/assets/e53cc893-9737-4439-a535-b853dde780f8" />
 
 Next, Mimikatz is installed onto the Windows machine. Windows Defender will need to be disabled to install the program, which is used by red teamers and attackers to extract credentials from the machine. To install Mimikatz, an exclusion is made in Windows Defender to the Downloads folder so that the Mimikatz installer is not automatically deleted. Once the file is downloaded, I launch a PowerShell terminal and change the directory to navigate to the folder where I downloaded Mimikatz. After that, I run the command to install Mimikatz.
+
+<img width="2560" alt="2 37" src="https://github.com/user-attachments/assets/f1ad2989-cf3d-4612-9c45-03cf97e27023" />
+<img width="1018" alt="2 38" src="https://github.com/user-attachments/assets/1caa5881-3df9-4817-9bbb-ee8f034fa7bd" />
+
+The next thing I did is go to the Wazuh dashboard to see if any events related to Mimikatz were generated. In this case, nothing was generated and this could be because the Sysmon events did not trigger anything, or rules from Wazuh, since by default Wazuh does not log events from Mimikatz. This could be changed by going into the Wazuh manager and configuring the ossec.conf file so that it can log everything. 
