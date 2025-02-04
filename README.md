@@ -151,3 +151,13 @@ In the configuration, I changed <logall> to yes as well as <logall_json>. Afterw
 <img width="1018" alt="2 41" src="https://github.com/user-attachments/assets/c6ed2b63-a148-482d-b1ab-9c131865db26" />
 
 For Wazuh to ingest the logs, I need to change the config and filebeat. This is done by typing nano etc/filebeat/filebeat.yml. In the configuration, I change archives enabled from false to true. Afterwards, I save the config file and restart the filebeat service.
+
+<img width="2560" alt="2 42" src="https://github.com/user-attachments/assets/741748d6-6c64-4d29-8db9-4cafa99a8691" />
+<img width="2560" alt="2 43" src="https://github.com/user-attachments/assets/14716bcf-034e-497a-b869-c424d4e6263c" />
+
+Next, back on the Wazuh dashboard, I create a new index. The index is created for all of the archives in order to search the logs.
+
+<img width="1018" alt="2 45" src="https://github.com/user-attachments/assets/af695999-d7f4-47f8-b35f-649473a8f5a2" />
+<img width="2560" alt="2 46" src="https://github.com/user-attachments/assets/e4919564-57fd-4c9a-8103-d42ce0ac3bee" />
+
+In the Wazuh Manager CLI, I type cat archives.json | grep -i to see if Mimikatz events have populated. In the Wazuh dashboard, I see the alerts generating as well.
