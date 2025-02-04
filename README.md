@@ -161,3 +161,14 @@ Next, back on the Wazuh dashboard, I create a new index. The index is created fo
 <img width="2560" alt="2 46" src="https://github.com/user-attachments/assets/e4919564-57fd-4c9a-8103-d42ce0ac3bee" />
 
 In the Wazuh Manager CLI, I type cat archives.json | grep -i to see if Mimikatz events have populated. In the Wazuh dashboard, I see the alerts generating as well.
+
+<img width="2560" alt="2 47" src="https://github.com/user-attachments/assets/7ea24c07-dc3c-43c7-a143-2a89cf0ab36e" />
+<img width="2560" alt="2 48" src="https://github.com/user-attachments/assets/282c030f-dca1-4104-b060-83b09ec0720c" />
+
+The next step is to create an alert. Wazuh has built in rules that can be used as a reference. On the dashboard, I navigate to Management > Rules > Manage Rule Files. In the box, I type sysmon to look for event ID 1. On the screen, 0800-sysmon_id_1.xml. The page then loads with sysmon rules that are built into Wazuh, specifically targeting ID 1. One of the rules will be copied to be built out as a custom rule to detect Mimikatz.
+
+<img width="2560" alt="2 49" src="https://github.com/user-attachments/assets/eb045d03-443c-412e-95a4-2b5adc93462a" />
+<img width="2560" alt="2 50" src="https://github.com/user-attachments/assets/f63fd800-1e25-430f-a77b-3ceba03c571f" />
+<img width="2560" alt="2 51" src="https://github.com/user-attachments/assets/1ade3f0c-0c74-4169-8c75-26704fea8b84" />
+
+Next, I go back to the previous page and click Custom Rules. Afterwards, I click on local_rules.xml and edit it. I paste the rule code that was copied into the local rule that alreay exists. I change the rule ID, level, field name, description, and mitre ID fields.
