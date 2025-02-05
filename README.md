@@ -169,6 +169,11 @@ The next step is to create an alert. Wazuh has built in rules that can be used a
 
 <img width="2560" alt="2 49" src="https://github.com/user-attachments/assets/eb045d03-443c-412e-95a4-2b5adc93462a" />
 <img width="2560" alt="2 50" src="https://github.com/user-attachments/assets/f63fd800-1e25-430f-a77b-3ceba03c571f" />
-<img width="2560" alt="2 51" src="https://github.com/user-attachments/assets/1ade3f0c-0c74-4169-8c75-26704fea8b84" />
+<img width="2560" alt="2 51" src="https://github.com/user-attachments/assets/62050cbe-2fe7-437d-87f7-ecdb766faa63" />
 
-Next, I go back to the previous page and click Custom Rules. Afterwards, I click on local_rules.xml and edit it. I paste the rule code that was copied into the local rule that alreay exists. I change the rule ID, level, field name, description, and mitre ID fields.
+Next, I go back to the previous page and click Custom Rules. Afterwards, I click on local_rules.xml and edit it. I paste the rule code that was copied into the local rule that alreay exists. I change the rule ID, level, field name, description, and mitre ID fields. I save the changes and then restart the manager. 
+
+<img width="1500" alt="2 52" src="https://github.com/user-attachments/assets/54af75aa-7b15-4042-8c01-daa2ecb1f739" />
+<img width="2560" alt="2 53" src="https://github.com/user-attachments/assets/36e90d56-da06-45e0-b524-cca8aa0f325d" />
+
+Back in the Windows machine, I rename the mimikatz.exe file to youareawesome so that the new alerts can be distinguishable from the old ones. Next, in PowerShell, I run the command to launch youareawesome.exe. Back in the Wazuh dashboard, I refresh the page and can see the alert generated for the action.
