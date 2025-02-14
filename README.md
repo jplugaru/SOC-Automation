@@ -189,3 +189,7 @@ Next, on the screen, a webhook element is dropped and renamed to Wazuh-Alerts. I
 <img width="974" alt="2 56" src="https://github.com/user-attachments/assets/4385dd4c-8b34-4ad5-bbf1-9f283b0b7c33" />
 
 Next, the ossec.conf configuration file is modified in the Wazuh Manager. Here, an integration tag is added and the hook URL is updated with that from Shuffle. 
+
+<img width="1500" alt="2 57" src="https://github.com/user-attachments/assets/43855a35-ce23-44b2-83c8-aae9b6dca17a" />
+
+After that is complete, I go back into the Windows machine and run the youareawesome.exe file again to generate telemetry 
