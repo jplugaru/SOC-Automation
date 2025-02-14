@@ -177,3 +177,15 @@ Next, I go back to the previous page and click Custom Rules. Afterwards, I click
 <img width="2560" alt="2 53" src="https://github.com/user-attachments/assets/36e90d56-da06-45e0-b524-cca8aa0f325d" />
 
 Back in the Windows machine, I rename the mimikatz.exe file to youareawesome so that the new alerts can be distinguishable from the old ones. Next, in PowerShell, I run the command to launch youareawesome.exe. Back in the Wazuh dashboard, I refresh the page and can see the alert generated for the action.
+
+<img width="2560" alt="2 54" src="https://github.com/user-attachments/assets/9e8c006b-3509-4294-8eee-8cfc4a76ad44" />
+
+The next step is to go to Shuffle.io and create an account. Shuffle will be used to create workflows. The new workflow I created is called SOC Automation Project. The use case selected is EDR to Ticket.
+
+<img width="2560" alt="2 55" src="https://github.com/user-attachments/assets/b73ec2ee-4823-4f8f-85a4-a3b0668a172b" />
+
+Next, on the screen, a webhook element is dropped and renamed to Wazuh-Alerts. I then select the webhook URI that will be inputted into the Wazuh Manager.
+
+<img width="974" alt="2 56" src="https://github.com/user-attachments/assets/4385dd4c-8b34-4ad5-bbf1-9f283b0b7c33" />
+
+Next, the ossec.conf configuration file is modified in the Wazuh Manager. Here, an integration tag is added and the hook URL is updated with that from Shuffle. 
